@@ -1153,9 +1153,10 @@ class PlayState extends MusicBeatState
 		}
 
 		var tempScore:String;
-		if(!instakillOnMiss) tempScore = Language.getPhrase('score_text', 'Score: {1} | Misses: {2} | Rating: {3}', [songScore, songMisses, str]);
-		else tempScore = Language.getPhrase('score_text_instakill', 'Score: {1} | Rating: {2}', [songScore, str]);
+		if(!instakillOnMiss) tempScore = Language.getPhrase('score_text', 'S: {1} | M: {2} | R: {3}', [songScore, songMisses, str]);
+		else tempScore = Language.getPhrase('score_text_instakill', 'S: {1} | R: {2}', [songScore, str]);
 		scoreTxt.text = tempScore;
+		scoreTxt.setFormat(Paths.font("NiseSegaSonic.ttf"), 20, FlxColor.WHITE);
 	}
 
 	public dynamic function fullComboFunction()
